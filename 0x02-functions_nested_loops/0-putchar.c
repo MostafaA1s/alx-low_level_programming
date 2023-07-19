@@ -5,12 +5,20 @@
  *
  * Description: putchar print
  *
- * Return : 0
+ * Return: 0
  */
 
 
-int main()
+int main(void)
 {
-	printf("_putchar\n");
-	return 0;
+	char word[] = "_putchar";
+	int index;
+
+	for (index = 0; index < 8; index++)
+	{
+		_putchar(word[index]);
+	}
+	_putchar('\n');
+
+	return (0);
 }
