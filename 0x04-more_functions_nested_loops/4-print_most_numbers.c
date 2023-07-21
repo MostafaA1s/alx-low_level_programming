@@ -1,9 +1,11 @@
+/*
+ * File: 4-print_most_numbers.c
+ * Auth: Suara Ayomide
+ */
 #include "main.h"
 
 /**
- * print_most_numbers - print the nums from 0-9 no 2 and 4
- *
- * Return: 0
+ * print_most_numbers - Prints the nums from 0-9 no 2 and 4
  */
 void print_most_numbers(void)
 {
@@ -16,6 +18,4 @@ void print_most_numbers(void)
 	}
 
 	_putchar('\n');
-
-	return (0);
 }
