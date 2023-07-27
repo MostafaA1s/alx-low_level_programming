@@ -1,34 +1,27 @@
 #include "main.h"
-#include <stdio.h>
 /**
- * _strcat - add string to another string,
- * overwriting the terminating null byte
- * and add it at the end of dest.
+ * _strncat - concatenates two strings,
  * @dest: destination.
  * @src: source.
- * @n: char count.
+ * @n: amount of bytes used from src.
  * Return: the pointer to dest.
  */
-
 char *_strncat(char *dest, char *src, int n)
 {
-	int destC = 0;
-	int srcC = 0;
+	int count = 0, count2 = 0;
 
-	while (dest[destC] != '\0')
+	while (*(dest + count) != '\0')
 	{
-		destC++;
+		count++;
 	}
 
-	while (srcC < n)
+	while (count2 < n)
 	{
-		dest[destC] = src[srcC];
-		if(src[srcC] == '\0')
+		*(dest + count) = *(src + count2);
+		if (*(src + count2) == '\0')
 			break;
-		srcC++;
-		destC++;
+		count++;
+		count2++;
 	}
-
-
 	return (dest);
 }
