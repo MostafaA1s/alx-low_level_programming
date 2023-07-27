@@ -23,6 +23,8 @@ char *_strcat(char *dest, char *src, int n)
 	while (srcC < n)
 	{
 		dest[destC] = src[srcC];
+		if(src[srcC] == '\0')
+			break;
 		srcC++;
 		destC++;
 	}
